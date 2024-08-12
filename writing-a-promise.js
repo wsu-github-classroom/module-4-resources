@@ -2,15 +2,15 @@
 let myPromise = new Promise((resolve, reject) => {
     // We simulate a async operation with a timeout
     setTimeout(() => {
-        let success = true; // Change this to false to see the reject scenario
+        let success = false; // Change this to false to see the reject scenario
         if (success) {
             resolve("Operation was successful!");
         } else {
             reject("Operation failed.");
         }
-    }, 1000);
+    }, 3000);
 });
-
+console.log("Promise created.");
 // Using the Promise
 myPromise
     // The then() method is called when the Promise is resolved
@@ -21,3 +21,4 @@ myPromise
     .catch((error) => {
         console.error(error); 
     });
+console.log("Promise used.");
