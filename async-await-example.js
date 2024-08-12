@@ -2,8 +2,12 @@
 function fetchData() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve('Data fetched successfully');
-        }, 1000);
+            if(true) { // true for testing - leads to unreachable code though
+                resolve('Data fetched successfully');
+            } else {
+                reject('Error fetching data');
+            }
+        }, 3000);
     });
 }
 
@@ -29,5 +33,7 @@ function getData() {
 }
 
 // Call the async function
+console.log("fetch the data");
 getData();
+console.log("data fetched");
 
