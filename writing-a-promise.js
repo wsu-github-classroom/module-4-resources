@@ -8,7 +8,7 @@ let myPromise = new Promise((resolve, reject) => {
         } else {
             reject("Operation failed.");
         }
-    }, 3000);
+    }, 3000); // Mini second
 });
 console.log("Promise created.");
 // Using the Promise
